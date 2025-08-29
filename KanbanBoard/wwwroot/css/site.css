@@ -1,0 +1,154 @@
+/* Container & Header */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f6f8;
+    color: #1e293b;
+}
+
+.kanban-container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1e40af;
+    margin-bottom: 40px;
+}
+
+/* Board Layout */
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.kanban-column {
+    background: #ffffff;
+    border-radius: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    min-width: 280px;
+}
+
+    .kanban-column h2 {
+        text-align: center;
+        color: #1e40af;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+/* Tasks */
+.kanban-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.kanban-task {
+    background: #f9fafb;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .kanban-task:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+
+    .kanban-task h3 {
+        margin: 0 0 5px 0;
+        font-size: 1.1rem;
+        color: #1e293b;
+    }
+
+    .kanban-task p {
+        margin: 0 0 10px 0;
+        font-size: 0.95rem;
+        color: #475569;
+    }
+
+/* Task Actions */
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.inline-form {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0;
+}
+
+.status-select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    transition: background 0.2s ease;
+}
+
+.btn-move {
+    background-color: #1e40af;
+    color: white;
+}
+
+    .btn-move:hover {
+        background-color: #2563eb;
+    }
+
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+}
+
+    .btn-delete:hover {
+        background-color: #f87171;
+    }
+
+.btn-add {
+    background-color: #1e40af;
+    color: white;
+}
+
+    .btn-add:hover {
+        background-color: #2563eb;
+    }
+
+/* Add Task Form */
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+    .add-task-form input {
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #cbd5e1;
+        font-size: 0.95rem;
+    }
